@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'selector',
   content: [
     "./index.html",
     "./src/**/*.{html,js,jsx,ts,tsx}"
@@ -7,12 +8,14 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'bgDesktop': "url('/images/bg-desktop-dark.jpg')",
-
+        'dark-desktop': "url('/images/bg-desktop-dark.jpg')",
+        "light-desktop": "url('/images/bg-desktop-light.jpg')",
+        "dark-mobile": "url('/images/bg-mobile-dark.jpg')",
+        "light-mobile": "url('/images/bg-mobile-light.jpg')",
       },
 
       colors: {
-        CheckBackground: 'linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%))',
+        'CheckBackground': 'linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%))',
         // Light theme
         'BrightBlue': 'hsl(220, 98%, 61%)',
         'VeryLightGray': 'hsl(0, 0%, 98%)',
