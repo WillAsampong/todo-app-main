@@ -71,7 +71,7 @@ const App = () => {
             type="text"
             value={inputValue}
             onChange={handleInputChange}
-            className="w-full outline-none bg-transparent text-LightGrayishBlue2 caret-BrightBlue border-none"
+            className="w-full outline-none bg-transparent dark:text-LightGrayishBlue2 text-VeryDarkBlue caret-BrightBlue border-none"
             placeholder="Create a new todo..."
           />
         </div>
@@ -102,7 +102,7 @@ const App = () => {
                       todo.completed 
                         ? 'line-through text-gray-500' 
                         : 'dark:text-LightGrayishBlue2 text-VeryDarkGrayishBlue'
-                    } px-4`}>{todo.text}</p>
+                    } px-4 cursor-pointer`} onClick={() => toggleCompleted(todo.id)}>{todo.text}</p>
                   </div>
                   <button
                     className='cross-button'
@@ -119,45 +119,45 @@ const App = () => {
           </div>
           <div className="desktop-categories md:flex gap-x-4 hidden">
             <p
-              className={`${filter === 'all' ? 'text-BrightBlue font-bold' : ''} hover:text-white transition-all ease-in cursor-pointer`}
+              className={`${filter === 'all' ? 'text-BrightBlue font-bold' : ''} hover:dark:text-VeryLightGrayishBlue hover:text-black transition-all ease-in cursor-pointer`}
               onClick={() => setFilter('all')}
             >
               All
             </p>
             <p
-              className={`${filter === 'active' ? 'text-BrightBlue font-bold' : ''} hover:text-white transition-all ease-in cursor-pointer`}
+              className={`${filter === 'active' ? 'text-BrightBlue font-bold' : ''} hover:dark:text-VeryLightGrayishBlue hover:text-black transition-all ease-in cursor-pointer`}
               onClick={() => setFilter('active')}
             >
               Active
             </p>
             <p
-              className={`${filter === 'completed' ? 'text-BrightBlue font-bold' : ''} hover:text-white transition-all ease-in cursor-pointer`}
+              className={`${filter === 'completed' ? 'text-BrightBlue font-bold' : ''} hover:dark:text-VeryLightGrayishBlue hover:text-black transition-all ease-in cursor-pointer`}
               onClick={() => setFilter('completed')}
             >
               Completed
             </p>
           </div>
           
-          <div className="cursor-pointer hover:text-LightGrayishBlue2" onClick={clearCompleted}>
+          <div className="cursor-pointer hover:dark:text-LightGrayishBlue2 hover:text-black" onClick={clearCompleted}>
             <span>Clear Completed</span>
           </div>
         </div>
       </div>
       <div className="mobile-categories w-5/6 mx-auto mt-4 rounded-md shadow-lg flex md:hidden justify-center gap-x-4 p-4 dark:bg-VeryDarkDesaturatedBlue bg-white">
         <p
-          className={`${filter === 'all' ? 'text-BrightBlue font-bold' : ''} hover:text-white transition-all ease-in cursor-pointer`}
+          className={`${filter === 'all' ? 'text-BrightBlue font-bold' : ''} hover:text-VeryDarkGrayishBlue transition-all ease-in cursor-pointer`}
           onClick={() => setFilter('all')}
         >
           All
         </p>
         <p
-          className={`${filter === 'active' ? 'text-BrightBlue font-bold' : ''} hover:text-white transition-all ease-in cursor-pointer`}
+          className={`${filter === 'active' ? 'text-BrightBlue font-bold' : ''} hover:text-VeryDarkGrayishBlue transition-all ease-in cursor-pointer`}
           onClick={() => setFilter('active')}
         >
           Active
         </p>
         <p
-          className={`${filter === 'completed' ? 'text-BrightBlue font-bold' : ''} hover:text-white transition-all ease-in cursor-pointer`}
+          className={`${filter === 'completed' ? 'text-BrightBlue font-bold' : ''} hover:text-VeryDarkGrayishBlue transition-all ease-in cursor-pointer`}
           onClick={() => setFilter('completed')}
         >
           Completed
