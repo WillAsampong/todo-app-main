@@ -65,7 +65,7 @@ const App = () => {
       </div>
 
       <form onSubmit={addItem} className='w-5/6 md:w-1/3 mx-auto px-4 md:px-0 dark:bg-VeryDarkDesaturatedBlue bg-white rounded-md'>
-        <div className="enter-todo mb-10 mt-2 p-4 flex items-center gap-x-4">
+        <div className="enter-todo my-10 p-4 flex items-center gap-x-4">
           <div className="w-5 h-5 border border-DarkGrayishBlue2 rounded-full" aria-label="Add todo"></div>
           <input
             type="text"
@@ -77,7 +77,7 @@ const App = () => {
         </div>
       </form>
 
-      <div className="todo-list py-2 mt-4 w-5/6 md:w-1/3 mx-auto dark:bg-VeryDarkDesaturatedBlue bg-white rounded-md shadow-lg overflow-hidden px-0">
+      <div className="todo-list py-2 w-5/6 md:w-1/3 mx-auto dark:bg-VeryDarkDesaturatedBlue bg-white rounded-md shadow-lg px-0 ">
         {filteredTodos.length === 0 ? (
           <p className="text-DarkGrayishBlue2 m-4 text-center">
             {filter === 'all'
